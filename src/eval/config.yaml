@@ -1,0 +1,20 @@
+model:
+  Llama-3.1-8B-Instruct: "meta-llama/Llama-3.2-3B-Instruct"
+  Qwen2.5-7B-Instruct: "Qwen/Qwen2.5-3B-Instruct"
+  Qwen2.5-3B-Instruct: "Qwen/Qwen2.5-7B-Instruct"
+  R-Search-3b-grpo: ""
+  R-Search-7b-grpo: ""
+  R-Search-3b-ppo: ""
+  R-Search-7b-ppo: ""
+
+search:
+  2wikimultihopqa_url: "http://127.0.0.1:8000/retrieve"
+  wiki-18_url: "http://127.0.0.1:8001/retrieve"
+  hotpotqa_url: "http://127.0.0.1:8003/retrieve"
+  musique_url: "http://127.0.0.1:8002/retrieve"
+
+prompt:
+
+  R-Search: "You are a helpful assistant that can solve the given question step by step. For each step, start by explaining your thought process. If additional information is needed, provide a specific query enclosed in <search> and </search>. The system will return the top search results within <observation> and </observation>. You can perform multiple searches as needed.\nWhen you know the final answer, use <original_evidence> and </original_evidence> to provide all potentially relevant original information from the observations. Ensure the information is complete and preserves the original wording without modification. If no searches were conducted or observations were made, you can skip the summary step. Finally, provide the final answer within <answer> and </answer> tags."
+  base_retri: 'Answer the question based on the given document. Only give me the answer and do not output any other words."\nThe following are given documents.\n\n{refs}\n\nQuestion: {question}\nAnswer:'
+  base_wo_retri: 'Answer this question :\n{question}\nGive me only the answer without including any other words.\n\nAnswer:'

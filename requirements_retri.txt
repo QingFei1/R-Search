@@ -1,0 +1,6 @@
+torch==2.4.0
+transformers<4.48
+datasets 
+pyserini
+uvicorn 
+fastapi
