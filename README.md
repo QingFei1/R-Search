@@ -135,10 +135,6 @@ CUDA_VISIBLE_DEVICES=2 python main.py --method R-Search --model R-Search-3b-grpo
 
 Evaluation results and output files will be saved in `src/eval/output/`.
 
-### 📊 Main Results
-<div align="center">
-    <img src="assets/results.png" width="90%" height="auto" />
-</div>
 
 ---
 
